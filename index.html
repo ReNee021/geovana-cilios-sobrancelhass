@@ -7,6 +7,8 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 <style>
 body{
   margin:0;
@@ -44,6 +46,9 @@ h1{
   width:100%;
   border-radius:15px;
   margin-bottom:15px;
+  /* Garante que todas as imagens de serviço tenham o mesmo formato visual */
+  aspect-ratio: 1 / 1; 
+  object-fit: cover;
 }
 .service h3{
   margin:0;
@@ -65,10 +70,31 @@ h1{
   text-decoration:none;
   border-radius:30px;
   font-size:16px;
+  transition: background 0.3s;
+}
+.btn:hover {
+    background: #a9884c;
 }
 footer{
   margin:40px 0 20px;
   font-size:14px;
+}
+
+/* Melhoria: Estilos para telas maiores, colocando os serviços lado a lado */
+@media (min-width: 768px) {
+    .services-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px; 
+        padding: 0 20px;
+        margin-bottom: 40px;
+    }
+    .service {
+        width: calc(33.333% - 20px); /* 3 por linha */
+        max-width: 300px;
+        margin: 0;
+    }
 }
 </style>
 </head>
@@ -85,49 +111,52 @@ footer{
 
 <div class="section-title">✨ Serviços & Valores</div>
 
-<!-- 1 -->
-<div class="service">
-  <img src="imagem1.jpg" alt="Volume Brasileiro">
-  <h3>Volume Brasileiro</h3>
-  <div class="price">R$ 100</div>
-  <p>Efeito elegante e marcante</p>
-  <a class="btn" href="https://wa.me/559691685603?text=Olá%20Geovana,%20quero%20agendar%20Volume%20Brasileiro%20(R$100)." target="_blank">Agendar</a>
-</div>
+<div class="services-container">
 
-<!-- 2 -->
-<div class="service">
-  <img src="imagem2.jpg" alt="Efeito Rímel">
-  <h3>Efeito Rímel</h3>
-  <div class="price">R$ 120</div>
-  <p>Efeito natural com destaque</p>
-  <a class="btn" href="https://wa.me/559691685603?text=Olá%20Geovana,%20quero%20agendar%20Efeito%20Rímel%20(R$120)." target="_blank">Agendar</a>
-</div>
+    <div class="service">
+      <img src="imagem1.jpg" alt="Volume Brasileiro">
+      <h3>Volume Brasileiro</h3>
+      <div class="price">R$ 100</div>
+      <p>Efeito elegante e marcante</p>
+      <a class="btn" href="https://wa.me/559691685603?text=Olá%20Geovana,%20quero%20agendar%20Volume%20Brasileiro%20(R$100)." target="_blank">Agendar</a>
+    </div>
 
-<!-- 3 -->
-<div class="service">
-  <img src="imagem3.jpg" alt="Volume Russo">
-  <h3>Volume Russo</h3>
-  <div class="price">R$ 130</div>
-  <p>Volume intenso e glamouroso</p>
-  <a class="btn" href="https://wa.me/559691685603?text=Olá%20Geovana,%20quero%20agendar%20Volume%20Russo%20(R$130)." target="_blank">Agendar</a>
-</div>
+    <div class="service">
+      <img src="imagem2.jpg" alt="Efeito Rímel">
+      <h3>Efeito Rímel</h3>
+      <div class="price">R$ 120</div>
+      <p>Efeito natural com destaque</p>
+      <a class="btn" href="https://wa.me/559691685603?text=Olá%20Geovana,%20quero%20agendar%20Efeito%20Rímel%20(R$120)." target="_blank">Agendar</a>
+    </div>
 
-<!-- 4 -->
-<div class="service">
-  <img src="imagem4.jpg" alt="Volume Egípcio">
-  <h3>Volume Egípcio</h3>
-  <div class="price">R$ 100</div>
-  <p>Volume diferenciado e moderno</p>
-  <a class="btn" href="https://wa.me/559691685603?text=Olá%20Geovana,%20quero%20agendar%20Volume%20Egípcio%20(R$100)." target="_blank">Agendar</a>
-</div>
+    <div class="service">
+      <img src="imagem3.jpg" alt="Volume Russo">
+      <h3>Volume Russo</h3>
+      <div class="price">R$ 130</div>
+      <p>Volume intenso e glamouroso</p>
+      <a class="btn" href="https://wa.me/559691685603?text=Olá%20Geovana,%20quero%20agendar%20Volume%20Russo%20(R$130)." target="_blank">Agendar</a>
+    </div>
 
-<!-- 5 -->
-<div class="service">
-  <img src="imagem5.jpg" alt="Clássico Fio a Fio">
-  <h3>Clássico Fio a Fio</h3>
-  <div class="price">R$ 90</div>
-  <p>Delicado e natural</p>
-  <a class="btn" href="https://wa.me/559691685603?text=Olá%20Geovana,%20quero%20agendar%20Clássico%20Fio%20a%20Fio%20(R$90)." target="_blank">Agendar</a>
+    <div class="service">
+      <img src="imagem4.jpg" alt="Volume Egípcio">
+      <h3>Volume Egípcio</h3>
+      <div class="price">R$ 100</div>
+      <p>Volume diferenciado e moderno</p>
+      <a class="btn" href="https://wa.me/559691685603?text=Olá%20Geovana,%20quero%20agendar%20Volume%20Egípcio%20(R$100)." target="_blank">Agendar</a>
+    </div>
+
+    <div class="service">
+      <img src="imagem5.jpg" alt="Clássico Fio a Fio">
+      <h3>Clássico Fio a Fio</h3>
+      <div class="price">R$ 90</div>
+      <p>Delicado e natural</p>
+      <a class="btn" href="https://wa.me/559691685603?text=Olá%20Geovana,%20quero%20agendar%20Clássico%20Fio%20a%20Fio%20(R$90)." target="_blank">Agendar</a>
+    </div>
+
+</div> <div style="margin: 20px 0;">
+  <a class="btn" href="https://wa.me/559691685603?text=Olá%20Geovana,%20tenho%20uma%20pergunta." target="_blank" style="background:#57AA63;">
+    <i class="fab fa-whatsapp"></i> Fale Conosco
+  </a>
 </div>
 
 <footer>
